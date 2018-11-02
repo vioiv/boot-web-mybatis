@@ -35,6 +35,7 @@ public class SpringMyBatisApplication {
 			jsonObject.put("V_POSITION", tysMember.getvPosition());
 			jsonArray.add(jsonObject);
 		}
+		System.out.println(jsonArray.toJSONString());
 		return jsonArray.toJSONString();
 	}
 	
