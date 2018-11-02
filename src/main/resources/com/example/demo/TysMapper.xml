@@ -5,7 +5,7 @@
 <mapper namespace="com.example.demo.TysMapper">
 
     <select id="selectMember" resultType="com.example.demo.TysMember">
-        SELECT V_MEMBER_NM as vMemberNm, V_POSITION as vPosition FROM TYX_MEMBER WHERE ROWNUM <![CDATA[ < ]]> 2
+        SELECT S_MEMBER_ID, V_MEMBER_NM as vMemberNm, V_BIRTH, V_POSITION, V_DESC, V_NO, V_TEAM as vPosition FROM TYX_MEMBER
     </select>
 
 </mapper>
