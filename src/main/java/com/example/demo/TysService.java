@@ -17,4 +17,8 @@ public class TysService {
 	public void insertMember(TysMember tysMember) {
 		tysMapper.insertMember(tysMember);
 	} 
+	
+	public void deleteMember() {
+		tysMapper.deleteMember();
+	}
 }

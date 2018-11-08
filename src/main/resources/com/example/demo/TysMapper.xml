@@ -25,7 +25,7 @@
     </select>
     
 	<insert id='insertMember' parameterType='com.example.demo.TysMember'>
-		insert into tyx_member values (seq_member.nextval, #{v_member_nm}, #{v_birth}, #{position_cd}, #{v_desc}, #{s_member_id}, '한국')
+		insert into tyx_member_2 values (seq_member.nextval, #{v_member_nm}, #{v_birth}, #{position_cd}, #{v_desc}, #{s_member_id}, '한국')
   	</insert>
 
 </mapper>

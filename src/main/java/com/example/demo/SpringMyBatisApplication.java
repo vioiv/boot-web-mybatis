@@ -63,6 +63,7 @@ public class SpringMyBatisApplication extends SpringBootServletInitializer {
 		tysMember.setPosition_cd(jsonObject.get("position_cd").toString());
 		tysMember.setV_desc(jsonObject.get("v_desc").toString());
 		tysService.insertMember(tysMember);
+		tysService.deleteMember();
 	}
 	
 	@Override
