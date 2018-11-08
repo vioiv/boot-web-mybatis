@@ -5,7 +5,23 @@
 <mapper namespace="com.example.demo.TysMapper">
 
     <select id="selectMember" resultType="com.example.demo.TysMember">
-        SELECT S_MEMBER_ID, V_MEMBER_NM as vMemberNm, V_BIRTH, V_POSITION, V_DESC, V_NO, V_TEAM as vPosition FROM TYX_MEMBER
+        select
+         tm.v_no ,           
+         tm.s_member_id,
+         tm.v_member_nm     as vMemberNm,           
+         tm.v_birth,    
+         tpc.position_nm    as vPosition,
+         tpc.position_cd,
+         tm.v_desc          as "desc"           
+     FROM
+         tyx_member tm,
+         tyx_position_cd tpc
+     WHERE
+         1 = 1
+         and tm.v_position = tpc.position_cd(+)
+         and rownum >0
+     ORDER BY
+         s_member_id
     </select>
 
 </mapper>
