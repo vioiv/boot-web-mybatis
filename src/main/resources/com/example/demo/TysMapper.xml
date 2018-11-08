@@ -8,20 +8,24 @@
         select
          tm.v_no ,           
          tm.s_member_id,
-         tm.v_member_nm     as vMemberNm,           
+         tm.v_member_nm,           
          tm.v_birth,    
-         tpc.position_nm    as vPosition,
+         tpc.position_nm,
          tpc.position_cd,
-         tm.v_desc          as "desc"           
+         tm.v_desc
      FROM
          tyx_member tm,
          tyx_position_cd tpc
      WHERE
          1 = 1
          and tm.v_position = tpc.position_cd(+)
-         and rownum >0
+         and rownum > 0
      ORDER BY
          s_member_id
     </select>
+    
+	<insert id='insertMember' parameterType='com.example.demo.TysMember'>
+		insert into tyx_member values (seq_member.nextval, #{v_member_nm}, #{v_birth}, #{position_cd}, #{v_desc}, #{s_member_id}, '한국')
+  	</insert>
 
 </mapper>

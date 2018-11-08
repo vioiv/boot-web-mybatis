@@ -12,5 +12,9 @@ public class TysService {
 	
 	public List<TysMember> selectMember() {
 		return tysMapper.selectMember();
+	}
+
+	public void insertMember(TysMember tysMember) {
+		tysMapper.insertMember(tysMember);
 	} 
 }

@@ -23,7 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<tomcat.version>8.5.34</tomcat.version>
-		<start-class>com.example.demo.SpringMyBatisApplicationWar</start-class>
+		<start-class>com.example.demo.SpringMyBatisApplication</start-class>
 	</properties>
 
 	<dependencies>
